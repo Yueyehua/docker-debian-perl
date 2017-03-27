@@ -1,8 +1,7 @@
 debian-perl
 ===========
 
-This is a Debian Jessie docker image with Perl.
-Linters are also installed in order to do tests.
+This is a Debian Jessie docker image with perl and plenv installed.
 
 Prerequisites
 -------------
