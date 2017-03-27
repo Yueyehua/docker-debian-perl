@@ -24,7 +24,7 @@ RUN \
   git clone https://github.com/tokuhirom/Perl-Build.git \
     ~/.plenv/plugins/perl-build/;
 
-# Install Ruby
+# Install Perl
 RUN \
   /root/.plenv/bin/plenv install ${_PERL_VERSION} && \
   /root/.plenv/bin/plenv global ${_PERL_VERSION};
