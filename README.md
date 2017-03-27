@@ -18,8 +18,8 @@ docker run \
   -d \                                           # daemonize
   --privileged \                                 # for systemd
   -v /sys/fs/cgroup:/sys/fs/cgroup:ro \          # for systemd
-  --name perl \                               # container name
-  -h perl \                                   # hostname
+  --name perl \                                  # container name
+  -h perl \                                      # hostname
   yueyehua/debian-perl
 docker exec -ti perl bash
 [Do something here]
