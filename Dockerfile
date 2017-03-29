@@ -12,7 +12,7 @@ RUN \
 # Install dependencies
 RUN \
   apt-get -qq -y install gcc git-core build-essential libffi-dev libssl-dev \
-    libcurl4-openssl-dev libreadline-dev
+    libcurl4-openssl-dev libreadline-dev;
 
 # Clean all
 RUN \
@@ -28,6 +28,10 @@ RUN \
 RUN \
   /root/.plenv/bin/plenv install ${_PERL_VERSION} && \
   /root/.plenv/bin/plenv global ${_PERL_VERSION};
+
+# Install PerlCritic
+RUN \
+  echo 'yes' | cpan -i Perl::Critic;
 
 # Export PATH
 ENV PATH=$PATH:/root/.plenv/bin:/root/.plenv/shims
